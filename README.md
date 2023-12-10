@@ -11,8 +11,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/JimTK16/intro-component-with-sign-up-form
-- Live Site URL: https://faq-accordion-by-jim.netlify.app/
+- Solution URL: https://github.com/JimTK16/nft-preview-card-component
+- Live Site URL: https://nft-preview-card-component-by-jim.netlify.app/
 
 ## My process
 
@@ -26,8 +26,5 @@ Users should be able to:
 
 ### What I learned
 
-- Select the next sibling element with .nextElementSibling
-- Animation the slide down of the content with maxHeight in JS:
-  . Set the initial maxHeight to 0.
-  . When the element is clicked set the maxHeight = element.scrollHeight + 'px'
-  . On the content's transition property to max-height 0.2s ease
+- Pseudo elements can only be used with block elements. In my first attempt to create the hover effect for the image, I used the ::after element on the image and it didn't show up. Later, I used a div to wrap around my image and used the ::after on the div and it worked!!
+- Using background-position to center the eye icon in the middle of the image.

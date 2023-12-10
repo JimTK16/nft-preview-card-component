@@ -1,5 +1,173 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap");
 
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --dark-blue-main-bg: hsl(217, 54%, 11%);
+  --dark-blue-card-bg: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+  min-height: 100svh;
+  background-color: var(--dark-blue-main-bg);
+}
+
+.main {
+  max-width: 33rem;
+  padding: 2.4rem;
+  background-color: var(--dark-blue-card-bg);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+.hero-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-img:hover {
+  cursor: pointer;
+}
+
+.hero-img:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(images/icon-view.svg);
+  background-size: auto;
+  background-color: hsla(178, 100%, 50%, 0.364);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 2rem;
+}
+
+.header-title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.header-p {
+  color: var(--soft-blue);
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-price,
+.remain-time {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.item-price--value {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.remain-time--text {
+  color: var(--soft-blue);
+  font-size: 1.5rem;
+}
+
+.line {
+  background-color: var(--soft-blue);
+  opacity: 0.25;
+  height: 0.25px;
+  width: 100%;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.creator-avatar {
+  width: 3.2rem;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.creator-text {
+  font-size: 1.5rem;
+  color: var(--soft-blue);
+}
+
+.creator-name {
+  color: white;
+}
+
+.creator-name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    max-width: 36rem;
+    row-gap: 2rem;
+  }
+
+  .header-title {
+    font-size: 2.25rem;
+  }
+
+  .header-p {
+    font-size: 1.8rem;
+  }
+
+  .item-price--value {
+    font-size: 1.6rem;
+  }
+
+  .remain-time--text {
+    font-size: 1.6rem;
+  }
+
+  .creator-avatar {
+    width: 3.6rem;
+  }
+
+  .creator-text {
+    font-size: 1.6rem;
+  }
 }
